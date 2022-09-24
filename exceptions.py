@@ -1,3 +1,11 @@
+import logging
+
 
 class UpdateException(Exception):
-    pass
+    def __init__(self, message):
+        logging.error(message)
+
+
+class CriticalException(Exception):
+    def __init__(self, message):
+        logging.critical(message)
